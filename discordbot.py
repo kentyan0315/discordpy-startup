@@ -14,8 +14,7 @@ channnel_ID = 803873798487146516 #チャンネルID
 
 
 @client.event
-async def on_message(message):
-        if message.content == '/boss':
+
         
 
 date = datetime.now()
@@ -51,6 +50,8 @@ while num < 7:
  if weekday == 7:
   weekday = 0
  #print(daylist[num] , weeklist[weekday])
+   async def on_message(message):
+   if message.content == '/boss':
     await message.channel.send(daylist[num] , weeklist[weekday])
  weekday += 1 
  num += 1
