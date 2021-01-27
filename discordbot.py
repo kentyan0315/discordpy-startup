@@ -3,6 +3,7 @@ import os
 import traceback
 import datetime
 import locale
+import calendar
 
 
 bot = commands.Bot(command_prefix='/')
@@ -20,6 +21,9 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def test(ctx):
     await ctx.send('動作中')
-
+async def boss(ctx):
+    for num in range(7):
+        weekday_name = calendar.day_name[weekday]
+        await ctx.sent(weekday_name)
 
 bot.run(token)
