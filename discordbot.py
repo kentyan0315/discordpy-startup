@@ -5,7 +5,7 @@ import datetime
 import locale
 import calendar
 
-#locale.setlocale(locale.LC_time,'ja_JP.UTF-8')
+
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -23,11 +23,6 @@ async def on_command_error(ctx, error):
 async def test(ctx):
     await ctx.send('動作中')
     
-@bot.command()    
-async def boss(ctx):
-    dt_now = datetime.datetime.now()
-   
-    for num in range(7):
-        await ctx.sent(dt_now.day':'dt_now.strftime('%A'))
+
 
 bot.run(token)
