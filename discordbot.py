@@ -1,6 +1,8 @@
 from discord.ext import commands
 import os
 import traceback
+import datetime
+import locale
 
 
 bot = commands.Bot(command_prefix='/')
