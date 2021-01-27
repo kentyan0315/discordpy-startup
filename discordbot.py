@@ -26,12 +26,19 @@ async def test(ctx):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
 
-@bot.command()
-async def days(ctx):
-weekday = datetime.date.today().weekday()
-weekday_name = calendar.day_name[weekday]
-    await ctx.send(weekday_name)
+# 60秒に一回ループ
+@tasks.loop(seconds=60)
+async def loop():
+    # 現在の時刻
+    now = datetime.now().strftime('%A')
+    if now == '2':
+        channel = client.get_channel(channnel_ID)
+        await channel.send('/boss')  
+
+#ループ処理実行
+loop.start()
 
 
 bot.run(token)
