@@ -24,8 +24,9 @@ async def test(ctx):
     
 @bot.command()    
 async def boss(ctx):
+    dt_now = datetime.datetime.now()
+    locale.setlocale(locale.LC_time,'ja_JP.UTF-8')
     for num in range(7):
-        weekday_name = calendar.day_name[weekday]
-        await ctx.sent(weekday_name)
+        await ctx.sent(dt_now.day':'de_now.strftime('%A'))
 
 bot.run(token)
