@@ -1,7 +1,12 @@
 from discord.ext import commands
 import os
 import traceback
+import datetime
+import locale
 
+locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
+
+channnel_ID = 803873798487146516 #チャンネルID
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -14,8 +19,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+async def test(ctx):
+    await ctx.send('動作中')
 
 
 bot.run(token)
