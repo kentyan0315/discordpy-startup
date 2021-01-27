@@ -5,7 +5,7 @@ import datetime
 import locale
 import calendar
 
-locale.setlocale(locale.LC_time,'ja_JP.UTF-8')
+#locale.setlocale(locale.LC_time,'ja_JP.UTF-8')
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
