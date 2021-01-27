@@ -27,5 +27,11 @@ async def test(ctx):
 async def ping(ctx):
     await ctx.send('pong')
 
+@bot.command()
+async def days(ctx):
+weekday = datetime.date.today().weekday()
+weekday_name = calendar.day_name[weekday]
+    await ctx.send(weekday_name)
+
 
 bot.run(token)
