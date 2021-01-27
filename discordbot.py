@@ -21,6 +21,8 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def test(ctx):
     await ctx.send('動作中')
+    
+@bot.command()    
 async def boss(ctx):
     for num in range(7):
         weekday_name = calendar.day_name[weekday]
