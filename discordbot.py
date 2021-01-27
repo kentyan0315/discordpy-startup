@@ -22,7 +22,8 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def test(ctx):
     await ctx.send('動作中')
-    
+
+@bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
