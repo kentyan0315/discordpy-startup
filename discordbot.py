@@ -23,6 +23,8 @@ async def on_command_error(ctx, error):
 async def test(ctx):
     await ctx.send('動作中')
     
+async def ping(ctx):
+    await ctx.send('pong')
 
 
 bot.run(token)
