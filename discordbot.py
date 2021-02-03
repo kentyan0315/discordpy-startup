@@ -13,6 +13,8 @@ class schedule:
         self.weekday = weekday
         self.weeklist = weeklist
         self.daylist = daylist
+        self.day0 = day0
+        
         
 date = datetime.now()
 # 2018-01-01 00:00:00
@@ -86,8 +88,8 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def boss(ctx, day0, week0)
-    await ctx.send(day0+week0)
+async def boss(ctx, day0)
+    await ctx.send(day0)
 
 
 
