@@ -76,7 +76,7 @@ async def ping(ctx):
     
 @bot.command()
 async def boss(self, ctx, date, today, weekday, weeklist, daylist)
-    await ctx.send(f'{today}')
+    await ctx.send(today)
 
 
 
