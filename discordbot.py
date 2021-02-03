@@ -43,7 +43,7 @@ class ScheduleTime:
     return True
 
 
-token = ''                        # DiscordBotのトークン
+                      # DiscordBotのトークン
 client = discord.Client()         # ディスコードの接続に使用するオブジェクト
 DebugId = '803873798487146516'                      # コマンドなどを入力するチャンネル
 DefaultId = '803873798487146516'                    # 呟くチャンネル
