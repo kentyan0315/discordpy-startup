@@ -56,12 +56,7 @@ for num in range(7):
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-    # Botの準備完了時に呼び出されるイベント
-    async def on_ready(self):
-        print('-----')
-        print(self.user.name)
-        print(self.user.id)
-        print('-----')
+
 
 @bot.event
 async def on_command_error(ctx, error):
