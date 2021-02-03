@@ -70,7 +70,5 @@ async def ping(ctx):
     
 
 
-@bot.command()
-async def ping(boss):
-    await ctx.send('daylist[0] = today.date() + timedelta(days=0)')
+
 bot.run(token)
